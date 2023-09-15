@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Status Saver</string>
+    <string name="back">Back</string>
+    <string name="whatsapp_web">Whatsapp Web</string>
+    <string name="lite_messge">Lite Message</string>
+    <string name="status_saver">Satus Saver</string>
+    <string name="self_chat">Self Chat</string>
+    <string name="text_style">Text Style</string>
+    <string name="setting">Setting</string>
+    <string name="title_activity_select_whatsapp_type">SelectWhatsappTypeActivity</string>
+    <string name="whatsapp">WhatsApp</string>
+    <string name="whatsapp_business">WhatsApp Business</string>
+    <string name="title_activity_select_status_saver">StatusSaverActivity</string>
+    <string name="title_activity_status_view">Status View</string>
+    <string name="title_activity_text_style">Text Style</string>
+    <string name="title_activity_lite_message">Lite Message</string>
+    <string name="title_activity_setting">Setting</string>
+</resources>

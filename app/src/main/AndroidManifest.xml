@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+
+    <queries>
+        <package android:name="com.whatsapp" />
+        <package android:name="com.whatsapp.w4b" />
+
+        <intent>
+            <action android:name="android.intent.action.SEND" />
+
+            <data android:mimeType="*/*" />
+        </intent>
+    </queries>
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.WhatsappStatusSaverTools"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+        <activity
+            android:name=".ui.screens.select_whatsapp_type.SelectWhatsappTypeActivity"
+            android:exported="false"
+            android:label="@string/title_activity_select_whatsapp_type"
+            android:theme="@style/Theme.WhatsappStatusSaverTools" />
+        <activity
+            android:name=".ui.screens.setting.SettingActivity"
+            android:exported="false"
+            android:label="@string/title_activity_setting"
+            android:theme="@style/Theme.WhatsappStatusSaverTools" />
+        <activity
+            android:name=".ui.screens.status_saver.StatusSaverActivity"
+            android:exported="false"
+            android:label="@string/title_activity_select_status_saver"
+            android:theme="@style/Theme.WhatsappStatusSaverTools" />
+        <activity
+            android:name=".ui.screens.status_view.StatusViewActivity"
+            android:exported="false"
+            android:label="@string/title_activity_status_view"
+            android:theme="@style/Theme.WhatsappStatusSaverTools" />
+        <activity
+            android:name=".ui.screens.downloaded_status.DownloadedStatusActivity"
+            android:exported="false"
+            android:label="@string/title_activity_status_view"
+            android:theme="@style/Theme.WhatsappStatusSaverTools" />
+        <activity
+            android:name=".ui.screens.text_style.TextStyleActivity"
+            android:exported="false"
+            android:label="@string/title_activity_text_style"
+            android:theme="@style/Theme.WhatsappStatusSaverTools" />
+        <activity
+            android:name=".ui.screens.lite_message.LiteMessageActivity"
+            android:exported="false"
+            android:label="@string/title_activity_lite_message"
+            android:theme="@style/Theme.WhatsappStatusSaverTools" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.WhatsappStatusSaverTools">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.ambits.whatsapp.status.saver.tools.provider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="android:authorities">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"
+                tools:replace="android:resource" />
+        </provider>
+    </application>
+
+</manifest>
